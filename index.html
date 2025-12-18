@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICARUS CIRCUS | 19 ANOS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <main class="container">
+        <header class="hero">
+            <h1 class="glitch" data-text="ICARUS CIRCUS">ICARUS CIRCUS</h1>
+            <p class="subtitle">Ícaro faz 19 anos</p>
+        </header>
+
+        <section class="countdown-container">
+            <div id="countdown">
+                <div class="time-block">
+                    <span id="days">00</span>
+                    <label>Dias</label>
+                </div>
+                <div class="time-block">
+                    <span id="hours">00</span>
+                    <label>Horas</label>
+                </div>
+                <div class="time-block">
+                    <span id="minutes">00</span>
+                    <label>Minutos</label>
+                </div>
+                <div class="time-block">
+                    <span id="seconds">00</span>
+                    <label>Segundos</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="invitation">
+            <div class="card">
+                <h2>Você foi Convidado</h2>
+                <p>O espetáculo mais sombrio do ano está prestes a começar. Você ousa entrar?</p>
+                <p class="date">28 DE FEVEREIRO</p>
+            </div>
+        </section>
+
+        <section class="actions">
+            <button class="btn" onclick="openDetails('location')">
+                <span class="icon">📍</span> Como Chegar
+            </button>
+            <button class="btn" onclick="openDetails('traje')">
+                <span class="icon">🎭</span> Traje
+            </button>
+            <button class="btn highlight" onclick="openDetails('rsvp')">
+                <span class="icon">🧛</span> Confirmar Presença
+            </button>
+        </section>
+    </main>
+
+    <!-- Modals for details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
