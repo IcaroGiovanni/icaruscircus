@@ -26,7 +26,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(139,0,0,0.4) 100%), url('bg.png');
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(139, 0, 0, 0.4) 100%), url('bg.png');
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -186,18 +186,39 @@ h1 {
 
 /* Animations */
 @keyframes flicker {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
         opacity: 1;
     }
-    20%, 22%, 24%, 55% {
+
+    20%,
+    22%,
+    24%,
+    55% {
         opacity: 0.5;
     }
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(139, 0, 0, 0.8); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(139, 0, 0, 0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Modals */
@@ -225,6 +246,43 @@ h1 {
     text-align: center;
 }
 
+/* Dress Code Grid */
+.dress-code-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.dress-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(139, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.dress-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-red);
+}
+
+.dress-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.dress-item p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #ccc;
+    margin: 0;
+}
+
 .close {
     position: absolute;
     right: 20px;
@@ -236,8 +294,35 @@ h1 {
 
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
-    h1 { font-size: 3rem; }
-    .time-block { min-width: 80px; padding: 10px; }
-    .time-block span { font-size: 2rem; }
-    .card { padding: 20px; }
+    h1 {
+        font-size: 3rem;
+    }
+
+    .time-block {
+        min-width: 80px;
+        padding: 10px;
+    }
+
+    .time-block span {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 25px 15px;
+        margin: 10% auto;
+    }
+
+    .dress-code-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .dress-item img {
+        height: 250px;
+    }
 }

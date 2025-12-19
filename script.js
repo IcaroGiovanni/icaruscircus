@@ -2,7 +2,7 @@
 const countDownDate = new Date("Feb 28, 2026 21:00:00").getTime();
 
 // Update the count down every 1 second
-const x = setInterval(function() {
+const x = setInterval(function () {
 
     // Get today's date and time
     const now = new Date().getTime();
@@ -33,35 +33,55 @@ const x = setInterval(function() {
 function openDetails(type) {
     const modal = document.getElementById("modal");
     const body = document.getElementById("modal-body");
-    
+
     let content = "";
-    
-    switch(type) {
+
+    switch (type) {
         case 'location':
             content = `
-                <h2 style="font-family: Creepster; color: red; font-size: 2rem; margin-bottom: 20px;">Como Chegar</h2>
-                <p>O circo será montado no segredo mais bem guardado da cidade.</p>
-                <p style="margin-top: 20px; font-weight: bold;">[ENDEREÇO DA FESTA AQUI]</p>
-                <a href="#" style="background: #8B0000; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; display: inline-block; margin-top: 20px;">Abrir no Google Maps</a>
+                <h2 style="font-family: Creepster; color: red; font-size: 2.5rem; margin-bottom: 20px;">Onde a Magia Acontece</h2>
+                <div style="background: rgba(139, 0, 0, 0.1); padding: 30px; border-radius: 15px; border: 1px dashed var(--primary-red);">
+                    <p style="font-size: 1.2rem; margin-bottom: 15px;">O endereço secreto do nosso espetáculo será revelado em breve...</p>
+                    <p style="font-size: 1.5rem; color: var(--accent-color); font-weight: bold; letter-spacing: 2px;">REVELAÇÃO EM 10 DE JANEIRO</p>
+                </div>
+                <p style="margin-top: 20px; font-style: italic; opacity: 0.7;">Prepare-se para o inesperado.</p>
             `;
             break;
         case 'traje':
             content = `
-                <h2 style="font-family: Creepster; color: red; font-size: 2rem; margin-bottom: 20px;">Traje: Circus Horror</h2>
-                <p>Venha como sua pior pesadelo circense: Palhaços assassinos, domadores fantasmagóricos ou aberrações de outro mundo.</p>
-                <p style="margin-top: 20px; color: #ff0000;">TRAJE OBRIGATÓRIO (OU SEJA UM DELES)</p>
+                <h2 style="font-family: Creepster; color: red; font-size: 2.5rem; margin-bottom: 20px;">Traje: Esporte Fino</h2>
+                <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.5;">O espetáculo exige elegância com um toque de mistério. Prepare seu melhor traje <strong>Esporte Fino</strong>.</p>
+                
+                <div class="dress-code-grid">
+                    <div class="dress-item">
+                        <img src="traje_homem.png" alt="Exemplo Masculino">
+                        <p>Masculino: Blazer, camisa, calça de sarja ou social. Dispensa gravata.</p>
+                    </div>
+                    <div class="dress-item">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600&auto=format&fit=crop" alt="Exemplo Feminino">
+                        <p>Feminino: Vestidos curtos ou midi, macacões elegantes ou conjuntos de alfaiataria.</p>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 20px; color: #ff0000; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Elegância é obrigatória no nosso picadeiro!</p>
             `;
             break;
         case 'rsvp':
             content = `
-                <h2 style="font-family: Creepster; color: red; font-size: 2rem; margin-bottom: 20px;">Confirmar Presença</h2>
-                <p>Sua vida depende disso... ou quase isso.</p>
-                <p style="margin-top: 20px;">Envie uma mensagem para o Ícaro para garantir que seu nome não esteja na lista negra.</p>
-                <a href="https://wa.me/SEUNUMERO" style="background: #25d366; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; display: inline-block; margin-top: 20px;">Confirmar via WhatsApp</a>
+                <h2 style="font-family: Creepster; color: red; font-size: 2.5rem; margin-bottom: 20px;">Confirmar Presença</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Sua presença é a peça principal deste show. Não deixe sua cadeira vazia!</p>
+                <div style="margin: 25px 0;">
+                    <a href="https://wa.me/5531983837441?text=Ol%C3%A1%20%C3%8Dcaro!%20J%C3%A1%20garanti%20meu%20ingresso%20para%20o%20ICARUS%20CIRCUS.%20Pode%20contar%20comigo%20nesse%20espet%C3%A1culo%20sombrio!%20%F0%9F%8E%A9%F0%9F%8E%A1" 
+                       target="_blank"
+                       style="background: #25d366; color: white; padding: 18px 35px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-weight: bold; font-size: 1.1rem; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);">
+                        <span style="font-size: 1.5rem;">📱</span> Confirmar via WhatsApp
+                    </a>
+                </div>
+                <p style="font-size: 0.9rem; opacity: 0.6;">Favor confirmar até o dia 15 de Fevereiro.</p>
             `;
             break;
     }
-    
+
     body.innerHTML = content;
     modal.style.display = "block";
 }
@@ -70,7 +90,7 @@ function closeModal() {
     document.getElementById("modal").style.display = "none";
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
     const modal = document.getElementById("modal");
     if (event.target == modal) {
         modal.style.display = "none";
