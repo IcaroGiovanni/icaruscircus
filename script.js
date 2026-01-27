@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-const countDownDate = new Date("Feb 28, 2026 21:00:00").getTime();
+const countDownDate = new Date("Feb 28, 2026 22:00:00").getTime();
 
 // Update the count down every 1 second
 const x = setInterval(function () {
@@ -40,11 +40,20 @@ function openDetails(type) {
         case 'location':
             content = `
                 <h2 style="font-family: Creepster; color: red; font-size: 2.5rem; margin-bottom: 20px;">Onde a Magia Acontece</h2>
-                <div style="background: rgba(139, 0, 0, 0.1); padding: 30px; border-radius: 15px; border: 1px dashed var(--primary-red);">
-                    <p style="font-size: 1.2rem; margin-bottom: 15px;">O endereço secreto do nosso espetáculo será revelado em breve...</p>
-                    <p style="font-size: 1.5rem; color: var(--accent-color); font-weight: bold; letter-spacing: 2px;">REVELAÇÃO EM 10 DE JANEIRO</p>
+                <div style="background: rgba(139, 0, 0, 0.1); padding: 20px; border-radius: 15px; border: 1px dashed var(--primary-red); margin-bottom: 20px;">
+                    <img src="local.png" alt="Outro Nipe Eventos" style="width: 100%; border-radius: 10px; margin-bottom: 15px; border: 1px solid var(--primary-red);">
+                    <h3 style="color: var(--primary-red); margin-bottom: 10px;">Outro Nipe Eventos</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 15px; line-height: 1.4;">
+                        R. José Alves de Souza, 20<br>
+                        Santa Terezinha, Belo Horizonte - MG<br>
+                        CEP: 31360-120
+                    </p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Outro+Nipe+Eventos+R.+José+Alves+de+Souza+n20+Santa+Terezinha+Belo+Horizonte" 
+                       target="_blank" 
+                       style="background: var(--primary-red); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-weight: bold; transition: transform 0.3s ease;">
+                        <span>📍</span> Abrir no Google Maps
+                    </a>
                 </div>
-                <p style="margin-top: 20px; font-style: italic; opacity: 0.7;">Prepare-se para o inesperado.</p>
             `;
             break;
         case 'traje':
