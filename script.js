@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-const countDownDate = new Date("Feb 28, 2026 22:00:00").getTime();
+const countDownDate = new Date("Mar 7, 2026 21:00:00").getTime();
 
 // Update the count down every 1 second
 const x = setInterval(function () {
@@ -58,21 +58,20 @@ function openDetails(type) {
             break;
         case 'traje':
             content = `
-                <h2 style="font-family: Creepster; color: red; font-size: 2.5rem; margin-bottom: 20px;">Traje: Esporte Fino</h2>
-                <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.5;">O espetáculo exige elegância com um toque de mistério. Prepare seu melhor traje <strong>Esporte Fino</strong>.</p>
-                
-                <div class="dress-code-grid">
-                    <div class="dress-item">
-                        <img src="traje_homem.png" alt="Exemplo Masculino">
-                        <p>Masculino: Blazer, camisa, calça de sarja ou social. Dispensa gravata.</p>
-                    </div>
-                    <div class="dress-item">
-                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600&auto=format&fit=crop" alt="Exemplo Feminino">
-                        <p>Feminino: Vestidos curtos ou midi, macacões elegantes ou conjuntos de alfaiataria.</p>
-                    </div>
+                <p style="margin-bottom: 20px; color: #ff0000; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Elegância é obrigatória no nosso picadeiro!</p>
+                <div style="margin-top: 5px; padding: 15px; background: rgba(255, 0, 0, 0.1); border: 1px solid rgba(255, 0, 0, 0.3); border-radius: 12px; text-align: left;">
+                    <h3 style="color: #ff0000; font-size: 1.1rem; margin-bottom: 12px; text-transform: uppercase; display: flex; align-items: center; gap: 8px;">
+                        <span>🚫</span> É EXTREMAMENTE PROIBIDO:
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-weight: bold; color: #fff; font-size: 1rem;">
+                        <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: #ff0000;">❌</span> CAMISA DE TIME
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px;">
+                            <span style="color: #ff0000;">❌</span> CHINELO
+                        </li>
+                    </ul>
                 </div>
-                
-                <p style="margin-top: 20px; color: #ff0000; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Elegância é obrigatória no nosso picadeiro!</p>
             `;
             break;
         case 'rsvp':
@@ -86,7 +85,7 @@ function openDetails(type) {
                         <span style="font-size: 1.5rem;">📱</span> Confirmar via WhatsApp
                     </a>
                 </div>
-                <p style="font-size: 0.9rem; opacity: 0.6;">Favor confirmar até o dia 15 de Fevereiro.</p>
+                <p style="font-size: 0.9rem; opacity: 0.6;">Favor confirmar até o dia 28 de Fevereiro.</p>
             `;
             break;
     }
